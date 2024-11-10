@@ -37,7 +37,7 @@ export function CandyCheckoutForm () {
                 if (orderResult.status === "fail") {
                     let errorMessages = "";
                     for (const key in orderResult.data) {
-                        if (orderResult.data.hasOwnProperty(key)) {
+                        if (Object.prototype.hasOwnProperty.call(orderResult.data, key)) {
                             errorMessages += `${key}: ${orderResult.data[key]}\n`;
                         }
                     }

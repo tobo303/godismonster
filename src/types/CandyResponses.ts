@@ -1,9 +1,5 @@
 // All hail Johan Nordström for this! May ze kittehs be with you!
 
-type ValidationError = {
-	path: string[];
-}
-
 type CandyErrorResponse = {
 	status: "error";
 	message: string;
