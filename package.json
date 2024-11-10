@@ -1,0 +1,50 @@
+{
+  "name": "godismonster",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "host": "vite --host",
+    "build": "tsc -b && vite build",
+    "buildcss": "sass --no-source-map --style=compressed --update src/sass:public/css",
+    "lint": "eslint .",
+    "check:lint": "eslint .",
+    "check:tsc": "tsc",
+    "check:type-coverage": "type-coverage --detail --at-least 100 --ignore-files 'test/*'",
+    "check": "run-p check:*",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.59.16",
+    "@tanstack/react-query-devtools": "^5.59.19",
+    "axios": "^1.7.7",
+    "classnames": "^2.5.1",
+    "html-react-parser": "^5.1.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.27.0",
+    "react-spinners": "^0.14.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@tanstack/eslint-plugin-query": "^5.59.7",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "bootstrap": "^5.3.3",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.13",
+    "globals": "^15.11.0",
+    "npm-run-all2": "^7.0.1",
+    "react-bootstrap": "^2.10.5",
+    "sass": "^1.80.4",
+    "type-coverage": "^2.29.7",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.12.2",
+    "vite": "^5.4.9"
+  }
+}

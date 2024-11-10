@@ -1,0 +1,110 @@
+@use 'colors';
+@use 'sizes';
+
+.candyCard {
+    width: 10.5rem;
+    margin: 2px;
+    transition: box-shadow 0.5s ease;
+    height: 33vh;
+
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        padding: 0.01rem 0.01rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: colors.$gray-dark;
+        }
+
+        &:disabled {
+            background-color: colors.$gray-dark;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.candy-card-title {
+    font-size: sizes.$candy-card-title-font-size;
+    font-weight: bold;
+    word-break: break-all;
+    margin: 0;
+    position: absolute;
+}
+
+.candy-card-sale {
+    color: colors.$tertiary-color;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.candy-price {
+    color: colors.$black;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.candy-padding {
+    padding-top: sizes.$candy-padding;
+    padding-bottom: sizes.$candy-padding;
+}
+
+.candy-card-header {
+    color: colors.$white;
+    padding: '0px';
+    height: 2.2rem;
+    text-align: center;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    &-sale {
+        @extend .candy-card-header;
+        background-color: colors.$candy-sale-color;
+    }
+
+    &-out-of-stock {
+        @extend .candy-card-header;
+        background-color: colors.$tertiary-color;
+    }
+
+    &-out-of-stock-image {
+        position: relative;
+        top: 5px;
+    }
+}
+
+.shopping-cart {
+    background-color: colors.$white;
+    width: 6rem;
+
+    &-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &-text {
+        color: colors.$black;
+        font-size: 1.3em;
+        text-align: right;
+        width: 2rem;
+    }
+}
